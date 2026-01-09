@@ -3,6 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+      property="og:title"
+      content="Flip the coin | devChallenges | Nikhila D"
+   />
+  <meta
+    name="description"
+    content="Flip the coin - devChallenges"
+  >
+  <link rel="icon" type="image/png" sizes="32x32" href="./resources/favicon.ico">
   <title>Flip The Coin</title>
 
   <style>
@@ -19,7 +28,7 @@
 
     body {
       max-height: 100vh;
-      margin: 5%;
+      margin: auto;
       text-align: center;
       justify-content: center;
       align-items: center;
@@ -39,7 +48,6 @@
       text-shadow: 2px 2px 0px #35383f;
       -webkit-text-stroke-width: 5px;
       -webkit-text-stroke-color: #35383f;
-      paint-order: stroke fill;
     }
 
     h5{
@@ -47,18 +55,18 @@
     }
 
     #result {
-      margin: 1rem auto;
+      margin: 1.5rem auto;
       display: block;
       font-size: 1.5rem;
       min-height: 1.5em;
     }
 
     button {
-      background: #2d89ef;
-      color: #fff;
+      background: #1F6FB0;
+      color: #ECEDF0;
       border: none;
       display: block;
-      margin: auto;
+      margin: 1.5rem auto;
       padding: 14px 28px;
       font-size: 1.25rem;
       border-radius: 10px;
@@ -74,31 +82,23 @@
 
     .coin-wrapper {
       position: relative;
-      width: 160px;
-      height: 160px;
       margin: 1.5rem auto;
-      display: flex;
+      display: grid;
       align-items: center;
       justify-content: center;
     }
 
     .coin {
       position: relative;
-      width: 125px;
-      height: 125px;
-      margin: 2.5rem auto;
+      width: 150px;
+      height: 150px;
+      margin: 1.5em auto;
       z-index: 2;
       transition: transform 0.3s ease;
     }
 
     .coin-shadow {
-      position: absolute;
-      bottom: -10%;
-      left: 50%;
-      width: 120px;
-      transform: translateX(-50%);
-      opacity: 0.4;
-      z-index: 1;
+      margin:inherit;
     }
 
     /* Flip Animation */
@@ -107,11 +107,6 @@
     }
 
     @media (max-width: 480px) {
-      .coin-wrapper {
-        width: 120px;
-        height: 120px;
-      }
-
       .coin {
         width: 100px;
         height: 100px;
@@ -124,6 +119,7 @@
       
       h1 {
         font-size: 2rem;
+        -webkit-text-stroke-width: 2px;
       }
 
     }
@@ -136,8 +132,8 @@
     <h5>Press the coin or the button to flip the coin</h5>
 
     <div class="coin-wrapper">
-      <img src="resources/shadow.svg" alt="coin shadow" class="coin-shadow" />
       <img src="resources/heads.svg" alt="coin" class="coin" id="coin" />
+      <img src="resources/shadow.svg" alt="coin shadow" class="coin-shadow" />
     </div>
     
     <div id="result"></div>
